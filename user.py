@@ -43,7 +43,7 @@ class User:
     def __init__(self):
         self.passwords = {}
         self.active = False
-        self.name = os.getlogin()
+        self.name = os.getlogin().title()
         self.init_user()
 
     def init_user(self):

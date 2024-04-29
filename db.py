@@ -42,7 +42,7 @@ def view_sites(conn, cur):
         if len(row) == 0:
             print("Table empty")
             return None
-        print(row)
+        print(row[0])
 
 @connect
 def select_pw(conn, cur, website):
