@@ -48,7 +48,7 @@ def view_sites(conn, cur):
 def select_pw(conn, cur, website):
     res = cur.execute(f"SELECT password FROM passwords WHERE website='{website}'")
     pw = res.fetchone()
-    print(pw)
+    return pw[0]
 
 @connect
 def notebook_exists(conn, cur, name):

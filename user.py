@@ -6,6 +6,7 @@ import json
 import db
 import shutil
 from datetime import datetime
+import pyperclip
 
 WRKDIR = f"/home/{os.getlogin()}/.localpwm/"
 PW_HASH_FILE = "user-hash.txt"
@@ -123,7 +124,8 @@ class User:
                 print("Password must be between 8 and 24 characters")
 
     def select_pw(self, website):
-        db.select_pw(website)
+        pw = db.select_pw(website)
+        pyperclip.copy(pw)
      
     def display_all_passwords(self):
         db.view_pws()

@@ -1,2 +1,3 @@
 getmac==0.9.4
 passlib==1.7.4
+pyperclip
